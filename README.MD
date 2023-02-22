@@ -20,6 +20,8 @@ How to run this flask web app?
    `git clone https://github.com/Mahmood-Hussain/projectstar.git`
 
    `cd projectstar`
+2. Copy `.env` file
+   `cp .env.example .env`
 2. Install the requirements
 3. Run the app
    `python app.py`

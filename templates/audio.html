@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Audio: Singing Voice Separation</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'partials/libraries.html' %}
+</head>
+<main>
+    <div class="container">
+        {% include 'partials/header.html' %}
+        <div class="p-5 mb-4 bg-success text-white rounded-3 mt-1">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Single Source Singing Voice Separation</h1>
+                <div class="container my-5">
+                    <form action="/audio/predict" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="input-group">
+                                <!-- <label for="audio_file" class="form-label">Upload your song</label> -->
+                                <input class="form-control" type="file" id="audio_file" name="file">
+                                <button class="btn btn-dark" type="submit" value="upload">Upload & Convert</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-light p-5">
+            <p>
+                Audio signals play a crucial role in various applications, from speech recognition to music
+                production. However, processing and analyzing audio signals can be a challenging task,
+                especially when it comes to enhancing the quality or extracting specific features from the
+                signal. In recent years, deep learning models have shown great promise in the field of audio
+                processing, and the UNet1D model is a prime example of that.
+            </p>
+            <h3>
+                What is UNet1D?
+            </h3>
+            <p>
+                UNet1D is a deep learning architecture that uses a combination of convolutional and transpose
+                convolutional layers to perform encoding and decoding operations on the input audio signal. The
+                model is designed to take in audio signals of size 1x32000 and output a similar size signal with
+                potentially enhanced features.
+            </p>
+
+            <h3>
+                How Does UNet1D Work?
+            </h3>
+            <p>
+                The UNet1D model consists of an encoder and a decoder, with a bottleneck layer in between. The
+                encoder performs down-sampling operations on the input signal, while the decoder performs
+                up-sampling operations to reconstruct the original signal. The bottleneck layer in between is
+                responsible for capturing the most critical features of the input signal.
+
+                The UNet1D model has four encoding and decoding layers, with each encoding layer using an
+                increasing number of filters, and each decoding layer using a decreasing number of filters. The
+                model uses skip connections between the encoder and decoder layers, allowing the decoder to
+                access information from the corresponding encoder layer.
+            </p>
+
+            <h3>
+                Business Applications of UNet1D
+            </h3>
+            <p>
+                The UNet1D model has numerous applications in various business domains, such as speech
+                recognition, music production, and audio quality enhancement. Here are a few examples of how
+                UNet1D can be used in these domains:
+            <ul>
+                <li>
+                    Speech Recognition: The UNet1D model can be used to preprocess and enhance speech signals before
+                    feeding them into a speech recognition system. This can lead to more accurate transcription and
+                    better performance of the speech recognition system.
+
+                </li>
+                <li>
+                    Music Production: The UNet1D model can be used to separate and extract individual instrument
+                    tracks from a mixed music track. This can help music producers remix and edit tracks with more
+                    ease and flexibility.
+                </li>
+                <li>
+                    Audio Quality Enhancement: The UNet1D model can be used to reduce noise and enhance the quality
+                    of audio signals, such as recordings of conference calls, webinars, or podcasts. This can lead
+                    to better audio quality and more engaging content for the audience.
+                </li>
+            </ul>
+            </p>
+
+            <h3>Conclusion</h3>
+            <p>
+                The UNet1D model is a powerful and flexible deep learning architecture for audio processing and
+                analysis. Its ability to capture critical features of the input signal and enhance its quality
+                can be highly beneficial for various business applications. By using UNet1D, businesses can
+                potentially improve the accuracy and efficiency of their audio processing tasks, leading to
+                better performance and customer satisfaction.
+            </p>
+        </div>
+
+        <footer class="pt-3 mt-4 text-muted border-top">
+            &copy; 2023
+        </footer>
+    </div>
+</main>
+
+<body>
+    <!-- Add the bootstrap javascript file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

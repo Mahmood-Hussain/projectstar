@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Converted: Singing Voice Separation</title>
+    <!-- Add the bootstrap css file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">Converted Audio</h1>
+        <div class="text-center">
+            <audio controls>
+                <!-- result is the path get the adio and show -->
+                <source src="{{ url_for('send_audio', filename=result ) }}" type="audio/wav">
+            </audio>
+            <!-- option to download -->
+            <a href="{{ url_for('send_audio', filename=result ) }}" class="btn btn-primary my-3">Download</a>
+        </div>
+    </div>
+    <!-- Add the bootstrap javascript file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

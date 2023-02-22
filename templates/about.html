@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About Us</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% include 'partials/libraries.html' %}
+	</head>
+<body>
+	<div class="container">
+		{% include 'partials/header.html' %}
+		<h1 class="text-center mb-5 pt-5">About Us</h1>
+		<div class="row">
+			<!-- Left column -->
+			<div class="col-md-6 mb-4">
+				<div class="card h-100">
+					<img src="{{ url_for('static', filename='img/mk.jpeg') }}" class="card-img-top" alt="Mahmood Kashmiri">
+					<div class="card-body">
+						<h5 class="card-title">Mahmood Kashmiri</h5>
+						<p class="card-text">I am currently a Master's student at National Taipei University of Technology I completed my bachelors from Maharshi Dayanand University Rohtak, India.</p>
+						<p>Interests</p>
+						<ul>
+							<li>Neural Style Transfer</li>
+							<li>Generative Adversarial Networks</li>
+							<li>NLP</li>
+							<li>Multimedia Processing</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Right column -->
+			<div class="col-md-6 mb-4">
+				<div class="card h-100">
+					<img src="{{ url_for('static', filename='img/batakh.jpeg') }}" class="card-img-top" alt="Ratan Batakh">
+					<div class="card-body">
+						<h5 class="card-title">Ratan Batakh</h5>
+						<p class="card-text">I am IIT Ropar graduate and recently completed master's in Electrical Engineering from National Taipei University of Technology.</p>
+						<p>Interests</p>
+						<ul>
+							<li>Audio Singal Processing</li>
+							<li>NLP</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+</body>
+</html>

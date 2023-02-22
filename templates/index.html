@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home: Project *</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'partials/libraries.html' %}
+</head>
+
+<main>
+    <div class="container">
+        {% include 'partials/header.html' %}
+        <div class="row align-items-md-stretch pt-1">
+            <div class="col-md-6">
+                <div class="h-100 p-5 text-white bg-success rounded-3">
+                    <h2>Singing Voice Separation</h2>
+                    <p>Voice separation, also known as source separation, is the process of separating
+                        individual vocal and musical elements from a mixed audio recording.
+                        In the context of singing, this projects separates the vocal track from the accompaniment music.
+                    </p>
+                    <a href="{{ url_for('audio') }}" class="btn btn-outline-light">
+                        Try Project
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="h-100 p-5 bg-warning border rounded-3">
+                    <h2>Email Writing Assistant</h2>
+                    <p>Automatic email completion, also known as email autocompletion or email suggestion. We
+                        use a machine learning model (LSTMs) to predict the next word in an email.
+                        The model is trained on a dataset of huge number of emails.
+                    </p>
+                    <a href="#" class="btn btn-outline-dark disabled">
+                        Coming Soon
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- include footer from partials/footer.html -->
+        {% include 'partials/footer.html' %}
+    </div>
+</main>
+
+<body>
+    <!-- Add the bootstrap javascript file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
